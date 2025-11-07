@@ -1,2 +1,5 @@
 @import "tailwindcss";
 
+.bg-sudbois {
+  background-color: #6aa81e;
+}
