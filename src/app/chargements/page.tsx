@@ -2,6 +2,7 @@
 import { createClient } from '@/utils/supabase/server';
 import {
   AddButton,
+  ClientDate
 } from '../components/items';
 import { DeleteChargementButton } from './DeleteChargementButton';
 
@@ -45,7 +46,7 @@ export default async function ChargementsPage() {
             >
               <div>
                 <div className="text-xs text-gray-500">
-                  {new Date(c.created_at).toLocaleString('fr-FR')}
+                  <ClientDate date={c.created_at} />
                 </div>
                 <div className="text-sm font-medium">
                   Client : {clientMap[c.client_id] ?? '—'}
